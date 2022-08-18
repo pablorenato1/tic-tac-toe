@@ -2,16 +2,18 @@ let x = document.querySelector(".x");
 let o = document.querySelector(".o");
 let boxes = document.querySelectorAll(".box");
 let boxContainer = document.querySelector('#container');
+let versusInfo = document.querySelector('#versus-info');
 let btn1 = document.querySelector('#player-1');
 let btn2 = document.querySelector('#players-2');
-let resetbtn = document.querySelector('#reset-button')
+let menubtn = document.querySelector('#menu-button')
 let clearbtn = document.querySelector('#clear-button')
 let messageContainer = document.querySelector("#message");
 let messageText = document.querySelector("#message p");
 let randomGuess = false;
 
-resetbtn.addEventListener('click', ()=>{
-    resetbtn.classList.add("hide");
+menubtn.addEventListener('click', ()=>{
+    menubtn.classList.add("hide");
+    versusInfo.classList.add('hide');
     clearbtn.classList.add("hide");
     btn1.classList.remove("hide");
     btn2.classList.remove("hide");
@@ -28,8 +30,10 @@ clearbtn.addEventListener('click', ()=>{
 })
 
 btn1.addEventListener('click', ()=>{
-    resetbtn.classList.remove('hide');
+    menubtn.classList.remove('hide');
     clearbtn.classList.remove('hide');
+    versusInfo.innerHTML = "Player vs I.A.";
+    versusInfo.classList.remove('hide');
     btn1.classList.add("hide");
     btn2.classList.add("hide");
     boxContainer.classList.remove("hide");
@@ -37,10 +41,12 @@ btn1.addEventListener('click', ()=>{
 })
 btn2.addEventListener('click', ()=>{
     boxContainer.classList.remove("hide")
+    versusInfo.innerHTML = "Player 1 vs Player 2";
+    versusInfo.classList.remove('hide');
     clearbtn.classList.remove('hide');
     btn1.classList.add("hide");
     btn2.classList.add("hide");
-    resetbtn.classList.remove('hide');
+    menubtn.classList.remove('hide');
     randomGuess = false;
 })
 

@@ -1,7 +1,7 @@
 # Tic-tac-toe
 
 <p> 
-A tic-tac-toe is one of the most common games in the childhood and i did this one so that i can practice what i learn and also improving what i think is a good addition to the game.
+The tic-tac-toe is one of the most common games in the childhood and i did this one so that i can practice what i learn and also improving what i think is a good addition to the game.
 </p>
 
 <p>
